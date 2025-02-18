@@ -1,0 +1,24 @@
+# Arquivos e pastas gerados pelo sistema operacional
+.DS_Store
+Thumbs.db
+
+# Configurações do IntelliJ IDEA
+/.idea/
+/*.iml
+/workspace.xml
+
+# Editor-based HTTP Client requests
+/httpRequests/
+
+# Arquivos de datasource local
+/dataSources/
+/dataSources.local.xml
+
+# Pasta shelf
+/shelf/
+
+# Dados do MongoDB (pasta local)
+/mongodb_data/*
+
+# Diretório de build do Maven
+/target/

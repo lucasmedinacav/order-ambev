@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:6.0.3
+    container_name: mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb_data:/data/db
+
+  rabbitmq:
+    image: rabbitmq:3.11-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"   # Porta de comunicação AMQP
+      - "15672:15672" # Porta do console de administração
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: pass
